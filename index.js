@@ -59,3 +59,9 @@ else if (inputArguments.includes('-l')) {
         process.exit(0);
     });
 }
+else {
+    weatherApi.getWeatherByPointName(settings.defaultPoint).then(function (result) {
+        console.log(result);
+        process.exit(0);
+    });
+}

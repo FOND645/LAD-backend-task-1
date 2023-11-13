@@ -1,6 +1,6 @@
-import {resolve} from 'path';
+import { resolve } from 'path';
 import { weather_api } from './apiClass';
-import {writeFileSync, readFileSync} from 'fs';
+import { writeFileSync, readFileSync } from 'fs';
 import { isFileAvailableToWrite } from './functions';
 import { defaultSettings } from './consts';
 import { jsonSettings } from './types';
@@ -61,5 +61,9 @@ if (inputArguments.includes('-h')) {
         console.log(result);
         process.exit(0);
     });
+} else {
+    weatherApi.getWeatherByPointName(settings.defaultPoint).then((result) => {
+        console.log(result);
+        process.exit(0);
+    });
 }
-
