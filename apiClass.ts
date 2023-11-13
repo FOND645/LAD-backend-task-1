@@ -36,8 +36,6 @@ export class weather_api {
     }
 
     getStringWeather(weatherSet: weatherDataSeries) {
-        console.log(weatherSet);
-        console.log();
         const {
             cloudcover,
             lifted_index,
